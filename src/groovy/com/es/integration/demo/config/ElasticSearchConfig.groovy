@@ -14,7 +14,6 @@ import org.springframework.data.elasticsearch.core.ElasticsearchOperations
 import org.springframework.data.elasticsearch.core.ElasticsearchTemplate
 import org.springframework.data.elasticsearch.repository.config.EnableElasticsearchRepositories
 
-@Log4j
 @Configuration
 @EnableElasticsearchRepositories(basePackages = ["com.es.integration.demo.repo"])
 class ElasticSearchConfig {
@@ -24,8 +23,6 @@ class ElasticSearchConfig {
         Client client
         Settings settings
 
-        log.debug("~~~~~~~~~~~~~~~ Elastic Search Configuration ~~~~~~~~~~~~~~~~~~~~~~")
-        log.debug("${Holders.config.grails.elasticsearch.properties}")
         println "*********************************************************************"
 
 

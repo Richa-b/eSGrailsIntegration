@@ -5,4 +5,6 @@ import org.springframework.data.elasticsearch.repository.ElasticsearchRepository
 
 interface UserRepository extends ElasticsearchRepository<User, String> {
 
+
+    User findByFirstName(String firstName);
 }
